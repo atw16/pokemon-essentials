@@ -131,25 +131,48 @@ def pbPrepareBattle(battle)
   elsif $PokemonGlobal.surfing
     backdrop = "water"   # This applies wherever you are, including in caves
   else
-    back = pbGetMetadata($game_map.map_id,MetadataBattleBack)
-    backdrop = back if back && back!=""
+    case battle.environment
+    when PBEnvironment::Grass, PBEnvironment::TallGrass,
+      PBEnvironment::ForestGrass, PBEnvironment::DarkGrass;     backdrop = "grass"
+#    when PBEnvironment::Rock;                                   backdrop = "rock"
+    when PBEnvironment::Sand;                                   backdrop = "sand"
+    when PBEnvironment::MovingWater, PBEnvironment::StillWater; backdrop = "water"
+    when PBEnvironment::Puddle;                                 backdrop = "puddle"
+    when PBEnvironment::Ice;                                    backdrop = "ice"
+    when PBEnvironment::Field;                                  backdrop = "field"
+    end
+#  else
+#    back = pbGetMetadata($game_map.map_id,MetadataBattleBack)
+#    backdrop = back if back && back!=""
   end
-  backdrop = "indoor1" if !backdrop
+  if $game_map.map_id == 113 # Brute force forest backdrop if map is Picea Forest
+    backdrop = "forest"
+  elsif $game_map.map_id == 33
+    backdrop = "DandeloGym"
+  end
+  backdrop = "field" if !backdrop # Default to field backdrop
   battle.backdrop = backdrop
   # Choose a name for bases depending on environment
   if battleRules["base"].nil?
     case battle.environment
     when PBEnvironment::Grass, PBEnvironment::TallGrass,
-         PBEnvironment::ForestGrass;                            base = "grass"
-#    when PBEnvironment::Rock;                                   base = "rock"
+         PBEnvironment::ForestGrass, PBEnvironment::DarkGrass;  base = "grass"
+#    when PBEnvironment::Rock;                                  base = "rock"
     when PBEnvironment::Sand;                                   base = "sand"
     when PBEnvironment::MovingWater, PBEnvironment::StillWater; base = "water"
     when PBEnvironment::Puddle;                                 base = "puddle"
     when PBEnvironment::Ice;                                    base = "ice"
+#    when PBEnvironment::Field;                                  base = "field"
     end
   else
     base = battleRules["base"]
   end
+  if $game_map.map_id == 113 # Brute force forest backdrop if map is Picea Forest
+    base = "forest"
+  elsif $game_map.map_id == 33
+    base = "DandeloGym"
+  end
+  base = "field" if !base # Default to field bases
   battle.backdropBase = base if base
   # Time of day
   if pbGetMetadata($game_map.map_id,MetadataEnvironment)==PBEnvironment::Cave
@@ -176,11 +199,12 @@ def pbGetEnvironment
     terrainTag = $game_player.terrain_tag
   end
   case terrainTag
-  when PBTerrain::Grass, PBTerrain::SootGrass
+  when PBTerrain::Grass, PBTerrain::SootGrass, PBTerrain::DarkGrass
     ret = (ret==PBEnvironment::Forest) ? PBEnvironment::ForestGrass : PBEnvironment::Grass
   when PBTerrain::TallGrass
     ret = (ret==PBEnvironment::Forest) ? PBEnvironment::ForestGrass : PBEnvironment::TallGrass
   when PBTerrain::Rock;                        ret = PBEnvironment::Rock
+#  when PBTerrain::Field;                       ret = PBEnvironment::Field
   when PBTerrain::Sand;                        ret = PBEnvironment::Sand
   when PBTerrain::DeepWater, PBTerrain::Water; ret = PBEnvironment::MovingWater
   when PBTerrain::StillWater;                  ret = PBEnvironment::StillWater

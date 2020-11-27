@@ -218,6 +218,28 @@ HeadbuttHigh
     BURMY,12,15
     BURMY,12,15
 #-------------------------------
+032 # Dandelo Town
+25,10,10
+Water
+    PSYDUCK,20,25
+    MARILL,20,25
+    SLOWPOKE,20,25
+    BUIZEL,20,25
+    BUIZEL,20,25
+OldRod
+    MAGIKARP,15,20
+    GOLDEEN,15,20
+GoodRod
+    GOLDEEN,20,25
+    FINNEON,20,25
+    REMORAID,20,25
+SuperRod
+    FINNEON,25,30
+    REMORAID,25,30
+    BASCULIN,25,30
+    GYARADOS,25,30
+    GYARADOS,25,30
+#-------------------------------
 034 # Ice Cave
 25,10,10
 Cave
@@ -265,6 +287,28 @@ Land
     SLUGMA,13,14
     SLUGMA,13,14
     SLUGMA,13,14
+#-------------------------------
+043 # Paix Village
+25,10,10
+Water
+    PSYDUCK,20,25
+    MARILL,20,25
+    SLOWPOKE,20,25
+    BUIZEL,20,25
+    BUIZEL,20,25
+OldRod
+    MAGIKARP,15,20
+    GOLDEEN,15,20
+GoodRod
+    GOLDEEN,20,25
+    FINNEON,20,25
+    REMORAID,20,25
+SuperRod
+    FINNEON,25,30
+    REMORAID,25,30
+    BASCULIN,25,30
+    GYARADOS,25,30
+    GYARADOS,25,30
 #-------------------------------
 044 # Route 6
 25,10,10
@@ -469,3 +513,429 @@ Land
     CUBONE,11,14
     CUBONE,11,14
     CUBONE,11,14
+#-------------------------------
+080 # Route 15
+25,10,10
+Land
+    PATRAT,2,4
+    PIDOVE,2,4
+    LILLIPUP,2,4
+    PURRLOIN,2,4
+    LILLIPUP,2,4
+    PURRLOIN,2,4
+    PATRAT,2,4
+    PIDOVE,2,4
+    PATRAT,2,4
+    PIDOVE,2,4
+    PATRAT,2,4
+    PIDOVE,2,4
+Water
+    PSYDUCK,20,25
+    MARILL,20,25
+    SLOWPOKE,20,25
+    BUIZEL,20,25
+    BUIZEL,20,25
+OldRod
+    MAGIKARP,15,20
+    GOLDEEN,15,20
+GoodRod
+    GOLDEEN,20,25
+    FINNEON,20,25
+    REMORAID,20,25
+SuperRod
+    FINNEON,25,30
+    REMORAID,25,30
+    BASCULIN,25,30
+    GYARADOS,25,30
+    GYARADOS,25,30
+LandNight
+    RATTATA,2,4
+    HOOTHOOT,2,4
+    LILLIPUP,2,4
+    PURRLOIN,2,4
+    LILLIPUP,2,4
+    PURRLOIN,2,4
+    RATTATA,2,4
+    HOOTHOOT,2,4
+    RATTATA,2,4
+    HOOTHOOT,2,4
+    RATTATA,2,4
+    HOOTHOOT,2,4
+#-------------------------------
+081 # Tree Shrine Town
+25,10,10
+Water
+    PSYDUCK,20,25
+    MARILL,20,25
+    SLOWPOKE,20,25
+    BUIZEL,20,25
+    BUIZEL,20,25
+OldRod
+    MAGIKARP,15,20
+    GOLDEEN,15,20
+GoodRod
+    GOLDEEN,20,25
+    FINNEON,20,25
+    REMORAID,20,25
+SuperRod
+    FINNEON,25,30
+    REMORAID,25,30
+    BASCULIN,25,30
+    GYARADOS,25,30
+    GYARADOS,25,30
+#-------------------------------
+083 # Route 16
+25,10,10
+Land
+    PATRAT,4,6
+    PIDOVE,4,6
+    LILLIPUP,4,6
+    PURRLOIN,4,6
+    LILLIPUP,4,6
+    PURRLOIN,4,6
+    PATRAT,4,6
+    PIDOVE,4,6
+    PATRAT,4,6
+    PIDOVE,4,6
+    PATRAT,4,6
+    PIDOVE,4,6
+LandNight
+    RATTATA,4,6
+    HOOTHOOT,4,6
+    LILLIPUP,4,6
+    PURRLOIN,4,6
+    LILLIPUP,4,6
+    PURRLOIN,4,6
+    RATTATA,4,6
+    HOOTHOOT,4,6
+    RATTATA,4,6
+    HOOTHOOT,4,6
+    RATTATA,4,6
+    HOOTHOOT,4,6
+#-------------------------------
+089 # Blue Tree Forest
+25,10,10
+Land
+    WURMPLE,6,8
+    SCATTERBUG,6,8
+    FLETCHLING,6,8
+    BUNNELBY,6,8
+    CATERPIE,6,8
+    WEEDLE,6,8
+    WURMPLE,6,8
+    SCATTERBUG,6,8
+    PETILIL,6,8
+    PIKACHU,6,8
+    KAKUNA,6,8
+    METAPOD,6,8
+LandNight
+    WURMPLE,6,8
+    SCATTERBUG,6,8
+    FLETCHLING,6,8
+    BUNNELBY,6,8
+    CATERPIE,6,8
+    WEEDLE,6,8
+    WURMPLE,6,8
+    SCATTERBUG,6,8
+    GASTLY,6,8
+    PHANTUMP,6,8
+    KAKUNA,6,8
+    METAPOD,6,8
+#-------------------------------
+090 # Blue Tree Forest
+25,10,10
+Land
+    WURMPLE,6,8
+    SCATTERBUG,6,8
+    FLETCHLING,6,8
+    BUNNELBY,6,8
+    CATERPIE,6,8
+    WEEDLE,6,8
+    WURMPLE,6,8
+    SCATTERBUG,6,8
+    PETILIL,6,8
+    PIKACHU,6,8
+    KAKUNA,6,8
+    METAPOD,6,8
+Water
+    PSYDUCK,20,25
+    MARILL,20,25
+    SLOWPOKE,20,25
+    BUIZEL,20,25
+    BUIZEL,20,25
+OldRod
+    MAGIKARP,15,20
+    GOLDEEN,15,20
+GoodRod
+    GOLDEEN,20,25
+    FINNEON,20,25
+    REMORAID,20,25
+SuperRod
+    FINNEON,25,30
+    REMORAID,25,30
+    BASCULIN,25,30
+    GYARADOS,25,30
+    GYARADOS,25,30
+LandNight
+    WURMPLE,6,8
+    SCATTERBUG,6,8
+    FLETCHLING,6,8
+    BUNNELBY,6,8
+    CATERPIE,6,8
+    WEEDLE,6,8
+    WURMPLE,6,8
+    SCATTERBUG,6,8
+    GASTLY,6,8
+    PHANTUMP,6,8
+    KAKUNA,6,8
+    METAPOD,6,8
+#-------------------------------
+092 # Blue Tree Forest
+25,10,10
+Land
+    WURMPLE,6,8
+    SCATTERBUG,6,8
+    FLETCHLING,6,8
+    BUNNELBY,6,8
+    CATERPIE,6,8
+    WEEDLE,6,8
+    WURMPLE,6,8
+    SCATTERBUG,6,8
+    PETILIL,6,8
+    PIKACHU,6,8
+    KAKUNA,6,8
+    METAPOD,6,8
+Water
+    PSYDUCK,20,25
+    MARILL,20,25
+    SLOWPOKE,20,25
+    BUIZEL,20,25
+    BUIZEL,20,25
+OldRod
+    MAGIKARP,15,20
+    GOLDEEN,15,20
+GoodRod
+    GOLDEEN,20,25
+    FINNEON,20,25
+    REMORAID,20,25
+SuperRod
+    FINNEON,25,30
+    REMORAID,25,30
+    BASCULIN,25,30
+    GYARADOS,25,30
+    GYARADOS,25,30
+LandNight
+    WURMPLE,6,8
+    SCATTERBUG,6,8
+    FLETCHLING,6,8
+    BUNNELBY,6,8
+    CATERPIE,6,8
+    WEEDLE,6,8
+    WURMPLE,6,8
+    SCATTERBUG,6,8
+    GASTLY,6,8
+    PHANTUMP,6,8
+    KAKUNA,6,8
+    METAPOD,6,8
+#-------------------------------
+093 # Blue Tree Forest
+25,10,10
+Land
+    WURMPLE,6,8
+    SCATTERBUG,6,8
+    FLETCHLING,6,8
+    BUNNELBY,6,8
+    CATERPIE,6,8
+    WEEDLE,6,8
+    WURMPLE,6,8
+    SCATTERBUG,6,8
+    PETILIL,6,8
+    PIKACHU,6,8
+    KAKUNA,6,8
+    METAPOD,6,8
+Water
+    PSYDUCK,20,25
+    MARILL,20,25
+    SLOWPOKE,20,25
+    BUIZEL,20,25
+    BUIZEL,20,25
+OldRod
+    MAGIKARP,15,20
+    GOLDEEN,15,20
+GoodRod
+    GOLDEEN,20,25
+    FINNEON,20,25
+    REMORAID,20,25
+SuperRod
+    FINNEON,25,30
+    REMORAID,25,30
+    BASCULIN,25,30
+    GYARADOS,25,30
+    GYARADOS,25,30
+LandNight
+    WURMPLE,6,8
+    SCATTERBUG,6,8
+    FLETCHLING,6,8
+    BUNNELBY,6,8
+    CATERPIE,6,8
+    WEEDLE,6,8
+    WURMPLE,6,8
+    SCATTERBUG,6,8
+    GASTLY,6,8
+    PHANTUMP,6,8
+    KAKUNA,6,8
+    METAPOD,6,8
+#-------------------------------
+100 # Route 17
+25,10,10
+Land
+    SPEAROW,10,12
+    BUNEARY,10,12
+    GROWLITHE,10,12
+    SHINX,10,12
+    SKIDDO,10,12
+    PANCHAM,10,12
+    GROWLITHE,10,12
+    SHINX,10,12
+    SKIDDO,10,12
+    PANCHAM,10,12
+    SKIDDO,10,12
+    PANCHAM,10,12
+Water
+    PSYDUCK,20,25
+    MARILL,20,25
+    SLOWPOKE,20,25
+    BUIZEL,20,25
+    BUIZEL,20,25
+OldRod
+    MAGIKARP,15,20
+    GOLDEEN,15,20
+GoodRod
+    GOLDEEN,20,25
+    FINNEON,20,25
+    REMORAID,20,25
+SuperRod
+    FINNEON,25,30
+    REMORAID,25,30
+    BASCULIN,25,30
+    GYARADOS,25,30
+    GYARADOS,25,30
+DarkGrass
+    SPEAROW,10,12
+    BUNEARY,10,12
+    LITLEO,10,12
+    BLITZLE,10,12
+    SKIDDO,10,12
+    PANCHAM,10,12
+    LITLEO,10,12
+    BLITZLE,10,12
+    BULBASAUR,10,12
+    AUDINO,10,12
+    BULBASAUR,10,12
+    AUDINO,10,12
+#-------------------------------
+101 # Route 17
+25,10,10
+Land
+    SPEAROW,10,12
+    BUNEARY,10,12
+    GROWLITHE,10,12
+    SHINX,10,12
+    SKIDDO,10,12
+    PANCHAM,10,12
+    GROWLITHE,10,12
+    SHINX,10,12
+    SKIDDO,10,12
+    PANCHAM,10,12
+    SKIDDO,10,12
+    PANCHAM,10,12
+Water
+    PSYDUCK,20,25
+    MARILL,20,25
+    SLOWPOKE,20,25
+    BUIZEL,20,25
+    BUIZEL,20,25
+OldRod
+    MAGIKARP,15,20
+    GOLDEEN,15,20
+GoodRod
+    GOLDEEN,20,25
+    FINNEON,20,25
+    REMORAID,20,25
+SuperRod
+    FINNEON,25,30
+    REMORAID,25,30
+    BASCULIN,25,30
+    GYARADOS,25,30
+    GYARADOS,25,30
+DarkGrass
+    SPEAROW,10,12
+    BUNEARY,10,12
+    LITLEO,10,12
+    BLITZLE,10,12
+    SKIDDO,10,12
+    PANCHAM,10,12
+    LITLEO,10,12
+    BLITZLE,10,12
+    BULBASAUR,10,12
+    AUDINO,10,12
+    BULBASAUR,10,12
+    AUDINO,10,12
+#-------------------------------
+104 # Hollit City Outskirts
+25,10,10
+Land
+    GULPIN,12,14
+    ELECTRIKE,12,14
+    BUIZEL,12,14
+    FURFROU,12,14
+    JIGGLYPUFF,12,14
+    CLEFAIRY,12,14
+    DRIFLOON,12,14
+    STARLY,12,14
+    LEDYBA,12,14
+    NATU,12,14
+    LEDYBA,12,14
+    NATU,12,14
+LandNight
+    GULPIN,12,14
+    ELECTRIKE,12,14
+    BUIZEL,12,14
+    FURFROU,12,14
+    JIGGLYPUFF,12,14
+    CLEFAIRY,12,14
+    DRIFLOON,12,14
+    STARLY,12,14
+    SPINARAK,12,14
+    MURKROW,12,14
+    SPINARAK,12,14
+    MURKROW,12,14
+#-------------------------------
+113 # Picea Forest
+25,10,10
+Land
+    WURMPLE,6,8
+    SCATTERBUG,6,8
+    FLETCHLING,6,8
+    BUNNELBY,6,8
+    CATERPIE,6,8
+    WEEDLE,6,8
+    WURMPLE,6,8
+    SCATTERBUG,6,8
+    PETILIL,6,8
+    PIKACHU,6,8
+    KAKUNA,6,8
+    METAPOD,6,8
+LandNight
+    WURMPLE,6,8
+    SCATTERBUG,6,8
+    FLETCHLING,6,8
+    BUNNELBY,6,8
+    CATERPIE,6,8
+    WEEDLE,6,8
+    WURMPLE,6,8
+    SCATTERBUG,6,8
+    GASTLY,6,8
+    PHANTUMP,6,8
+    KAKUNA,6,8
+    METAPOD,6,8

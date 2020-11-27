@@ -909,7 +909,7 @@ end
 def pbGetGoldString
   moneyString=""
   begin
-    moneyString=_INTL("${1}",$Trainer.money.to_s_formatted)
+    moneyString=_INTL("${1}",$Trainer.money.round.to_s_formatted)
   rescue
     if $data_system.respond_to?("words")
       moneyString=_INTL("{1} {2}",$game_party.gold,$data_system.words.gold)
@@ -1030,7 +1030,7 @@ def pbMessageDisplay(msgwindow,message,letterbyletter=true,commandProc=nil)
     }
   end
   text.gsub!(/\\pn/i,$Trainer.name) if $Trainer
-  text.gsub!(/\\pm/i,_INTL("${1}",$Trainer.money.to_s_formatted)) if $Trainer
+  text.gsub!(/\\pm/i,_INTL("${1}",$Trainer.money.round.to_s_formatted)) if $Trainer
   text.gsub!(/\\n/i,"\n")
   text.gsub!(/\\\[([0-9a-f]{8,8})\]/i) { "<c2="+$1+">" }
   text.gsub!(/\\pg/i,"\\b") if $Trainer && $Trainer.male?
@@ -1050,6 +1050,14 @@ def pbMessageDisplay(msgwindow,message,letterbyletter=true,commandProc=nil)
     end
     next ""
   }
+  # Boon's shout message effect
+  shout = 0
+  if text=~/\\sh/i
+    text.gsub!(/\\sh/i,"")
+    msgwindow.setSkin("Graphics/Windowskins/shout",false)
+    shout=16
+    startSE="shout"
+  end
   isDarkSkin = isDarkWindowskin(msgwindow.windowskin)
   text.gsub!(/\\[Cc]\[([0-9]+)\]/) {
     m = $1.to_i
@@ -1166,6 +1174,14 @@ def pbMessageDisplay(msgwindow,message,letterbyletter=true,commandProc=nil)
   msgwindow.text = text
   Graphics.frame_reset if Graphics.frame_rate>40
   loop do
+    if shout != 0
+      shout=(shout*-0.9).floor
+      if atTop
+        msgwindow.y=shout
+      else
+        msgwindow.y=Graphics.height-(msgwindow.height + shout)
+      end
+    end
     if signWaitCount>0
       signWaitCount -= 1
       if atTop

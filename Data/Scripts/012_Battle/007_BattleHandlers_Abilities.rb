@@ -1993,6 +1993,17 @@ BattleHandlers::EOREffectAbility.add(:SPEEDBOOST,
   }
 )
 
+BattleHandlers::EOREffectAbility.add(:HEADACHE,
+  proc { |ability,battler,battle|
+    # A Pokémon's turnCount is 0 if it became active after the beginning of a
+    # round
+    if battler.turnCount>0 && battler.pbCanRaiseStatStage?(PBStats::SPATK,battler)
+      battle.pbDisplay(_INTL("{1}'s headache intensifies!",battler.pbThis))
+      battler.pbRaiseStatStageByAbility(PBStats::SPATK,1,battler)      
+    end
+  }
+)
+
 #===============================================================================
 # EORGainItemAbility handlers
 #===============================================================================

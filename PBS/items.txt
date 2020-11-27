@@ -646,3 +646,19 @@
 631,NSOLARIZER,N-Solarizer,N-Solarizers,8,0,"A machine to fuse Necrozma, which needs light, and Solgaleo.",5,0,6,
 632,NLUNARIZER,N-Lunarizer,N-Lunarizers,8,0,"A machine to fuse Necrozma, which needs light, and Lunala.",5,0,6,
 633,MEGARING,Mega Ring,Mega Rings,8,0,"This ring contains an untold power that somehow enables Pokémon carrying Mega Stones to Mega Evolve.",0,0,6,
+#-------------------------------
+634,EXPALL,Exp. Share,Exp. Shares,8,0,"Turning off this special device will prevent all the Pokémon on your team from receiving Exp. Points from battles.",2,0,6
+635,EXPALLOFF,Exp. Share,Exp. Share 2s,8,0,"Turning on this special device will allow all the Pokémon on your team to receive Exp. Points from battles.",2,0,6
+#-------------------------------
+636,PACKAGE,Package,Packages,8,0,"An injured delivery person on Route 17 asked me to deliver this package to a resident of Dandelo Town.",2,0,6,
+637,CLEFAIRYDOLL,Clefairy Doll,Clefairy Dolls,8,0,"A stolen Clefairy Doll to be returned to Lil' Sis near Hollit City.",2,0,6,
+638,MYSTERIOUSORB,Mysterious Orb,Mysterious Orbs,8,0,"A mysterious orb received from the former leader of a crime syndicate.",2,0,6,
+639,PROSPEROUSCHARM,Prosperous Charm,Prosperous Charms,8,0,"Turning off this special device will prevent increased money from being earned from battles.",2,0,6
+640,PROSPEROUSCHARMOFF,Prosperous Charm,Prosperous Charms,8,0,"Turning on this special device will increase money earned from battles.",2,0,6
+641,SURFITEM,Surf Item,Surf Items,8,0,"It's a surfing item.",2,0,6,
+642,ROCKSMASHITEM,Rock Smash Item,Rock Smash Items,8,0,"It's a smashing item.",2,0,6,
+643,FLYITEM,Fly Item,Fly Items,8,0,"It's a flying item.",2,0,6,
+644,STRENGTHITEM,Strength Item,Strength Items,8,0,"It's a strength item.",2,0,6,
+645,SHEARS,Shears,Shears,8,0,"These shears can be used to cut down small trees.",2,0,6,
+#-------------------------------
+646,ULTRAIVTRAINER,Ultra IV Trainer,Ultra IV Trainers,1,0,"This is a test.",1,0,0,

@@ -343,22 +343,24 @@ class PokeBattle_Battle
       end
       tMoney *= 2 if @field.effects[PBEffects::AmuletCoin]
       tMoney *= 2 if @field.effects[PBEffects::HappyHour]
+      tMoney *= 1.5 if hasConst?(PBItems,:PROSPEROUSCHARM) && $PokemonBag.pbHasItem?(:PROSPEROUSCHARM)
       oldMoney = pbPlayer.money
       pbPlayer.money += tMoney
       moneyGained = pbPlayer.money-oldMoney
       if moneyGained>0
-        pbDisplayPaused(_INTL("You got ${1} for winning!",moneyGained.to_s_formatted))
+        pbDisplayPaused(_INTL("You got ${1} for winning!",moneyGained.round.to_s_formatted))
       end
     end
     # Pick up money scattered by Pay Day
     if @field.effects[PBEffects::PayDay]>0
       @field.effects[PBEffects::PayDay] *= 2 if @field.effects[PBEffects::AmuletCoin]
       @field.effects[PBEffects::PayDay] *= 2 if @field.effects[PBEffects::HappyHour]
+      @field.effects[PBEffects::PayDay] *= 1.5 if hasConst?(PBItems,:PROSPEROUSCHARM) && $PokemonBag.pbHasItem?(:PROSPEROUSCHARM)
       oldMoney = pbPlayer.money
       pbPlayer.money += @field.effects[PBEffects::PayDay]
       moneyGained = pbPlayer.money-oldMoney
       if moneyGained>0
-        pbDisplayPaused(_INTL("You picked up ${1}!",moneyGained.to_s_formatted))
+        pbDisplayPaused(_INTL("You picked up ${1}!",moneyGained.round.to_s_formatted))
       end
     end
   end

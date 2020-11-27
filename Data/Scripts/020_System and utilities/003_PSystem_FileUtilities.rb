@@ -455,7 +455,7 @@ end
 #===============================================================================
 # Load/play Pokémon cry files
 #===============================================================================
-def pbPlayCry(pokemon,volume=90,pitch=nil)
+def pbPlayCry(pokemon,volume=80,pitch=nil)
   return if !pokemon
   if pokemon.is_a?(Numeric) || pokemon.is_a?(String) || pokemon.is_a?(Symbol)
     pbPlayCrySpecies(pokemon,0,volume,pitch)
@@ -464,7 +464,7 @@ def pbPlayCry(pokemon,volume=90,pitch=nil)
   end
 end
 
-def pbPlayCrySpecies(pokemon,form=0,volume=90,pitch=nil)
+def pbPlayCrySpecies(pokemon,form=0,volume=80,pitch=nil)
   return if !pokemon
   pokemon = getID(PBSpecies,pokemon)
   return if !pokemon.is_a?(Numeric)
@@ -475,7 +475,7 @@ def pbPlayCrySpecies(pokemon,form=0,volume=90,pitch=nil)
   end
 end
 
-def pbPlayCryPokemon(pokemon,volume=90,pitch=nil)
+def pbPlayCryPokemon(pokemon,volume=80,pitch=nil)
   return if !pokemon || pokemon.egg?
   if pokemon.respond_to?("chatter") && pokemon.chatter
     pokemon.chatter.play
@@ -579,7 +579,7 @@ def pbGetWildCaptureME
     music = pbGetMetadata(0,MetadataWildCaptureME)
     ret = pbStringToAudioFile(music) if music && music!=""
   end
-  ret = pbStringToAudioFile("Battle capture success") if !ret
+  ret = pbStringToAudioFile("BWCaughtPokemon") if !ret
   ret.name = "../../Audio/ME/"+ret.name
   return ret
 end

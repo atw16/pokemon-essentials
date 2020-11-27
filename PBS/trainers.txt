@@ -115,3 +115,425 @@ Pokemon = CHARIZARD,63
     Item = SITRUSBERRY
 Pokemon = BLASTOISE,63
     Item = SITRUSBERRY
+#-------------------------------
+[POKEMONTRAINER_Eddie,Eddie,1]
+Pokemon = EEVEE,5
+	Moves = TACKLE,TAILWHIP,GROWL,SANDATTACK
+	Ability = 2
+	Gender = female
+	Nature = ADAMANT
+	IV = 15
+	Ball = 20
+#-------------------------------
+[POKEMONTRAINER_Eddie,Eddie,2]
+Items = POTION,POTION
+Pokemon = PHANTUMP,9
+	Moves = TACKLE,CONFUSERAY,ASTONISH,GROWTH
+	Ability = 2
+	Gender = male
+	Nature = IMPISH
+	IV = 15
+	Ball = 10
+Pokemon = EEVEE,10
+	Moves = TACKLE,SWIFT,BABYDOLLEYES,SANDATTACK
+	Ability = 2
+	Gender = female
+	Nature = ADAMANT
+	IV = 15
+	Ball = 20
+#-------------------------------
+[POKEMONTRAINER_Eddie,Eddie,3]
+Items = SUPERPOTION,SUPERPOTION
+Pokemon = PHANTUMP,15
+	Moves = INGRAIN,GROWTH,ASTONISH,CONFUSERAY
+	Ability = 2
+	Gender = male
+	Nature = IMPISH
+	IV = 15
+	Ball = 10
+Pokemon = BLITZLE,15
+	Moves = THUNDERWAVE,SHOCKWAVE,CHARGE,QUICKATTACK
+	Ability = 2
+	Gender = male
+	Nature = JOLLY
+	IV = 15
+	Ball = 11	
+Pokemon = EEVEE,16
+	Moves = QUICKATTACK,BABYDOLLEYES,SANDATTACK,TACKLE
+	Ability = 2
+	Gender = female
+	Nature = ADAMANT
+	IV = 15
+	Ball = 20
+#-------------------------------
+[YOUNGSTER,Jack]
+Pokemon = RATTATA,3
+	Ability = 1
+#-------------------------------
+[LASS,Jill]
+Pokemon = PURRLOIN,3
+	Ability = 0
+#-------------------------------
+[YOUNGSTER,James]
+Pokemon = PATRAT,6
+	Ability = 1
+#-------------------------------
+[LASS,June]
+Pokemon = PIDOVE,6
+	Ability = 1
+#-------------------------------
+[LADY,Pauline]
+Pokemon = PURRLOIN,7
+	Ability = 0
+#-------------------------------
+[RICHBOY,Charles]
+Pokemon = RATTATA,7
+	Ability = 1
+Pokemon = PATRAT,7
+	Ability = 1
+#-------------------------------
+[BUGCATCHER,Lee]
+Pokemon = CATERPIE,7
+	Ability = 0
+Pokemon = WEEDLE,7
+	Ability = 0
+#-------------------------------
+[POKEMONBREEDER_F,Sarah]
+Pokemon = WURMPLE,8
+	Ability = 0
+Pokemon = SCATTERBUG,8
+	Ability = 1
+#-------------------------------
+[ARTIST,Leonard]
+Pokemon = PETILIL,9
+	Ability = 1
+#-------------------------------
+[POLICEOFFICER,Grant]
+Pokemon = GROWLITHE,10
+	Ability = 0
+#-------------------------------
+[HIKER,Phillip]
+Pokemon = GEODUDE,11
+	Ability = 1
+Pokemon = BONSLY,11
+	Ability = 0
+#-------------------------------
+[BACKPACKER_M,Tobias]
+Pokemon = ARON,11
+	Ability = 0
+Pokemon = ROGGENROLA,11
+	Ability = 0
+#-------------------------------
+[HIKER,Jeremy]
+Pokemon = BONSLY,11
+	Ability = 0
+Pokemon = BINACLE,11
+	Ability = 0
+#-------------------------------
+[BACKPACKER_F,Lori]
+Pokemon = ONIX,12
+	Ability = 1
+#-------------------------------
+[LEADER_Flynt,Flynt]
+Items = SUPERPOTION,SUPERPOTION
+Pokemon = ROGGENROLA,12
+	Moves = SMACKDOWN,HEADBUTT,SANDATTACK,HARDEN
+	Ability = 0
+	Gender = male
+	Nature = ADAMANT
+	IV = 20
+	Ball = 19
+Pokemon = BINACLE,12
+	Moves = SMACKDOWN,FURYSWIPES,WITHDRAW,WATERGUN
+	Ability = 0
+	Gender = male
+	Nature = ADAMANT
+	IV = 20
+	Ball = 18
+Pokemon = SHUCKLE,13
+	Item = WHITEHERB
+	Moves = SHELLSMASH,SMACKDOWN,STRUGGLEBUG,WRAP
+	Ability = 0
+	Gender = male
+	Nature = BRAVE
+	IV = 20
+	Ball = 23
+#-------------------------------
+[BUGCATCHER,Wesley]
+Pokemon = VENONAT,12
+    Ability = 1
+Pokemom = YANMA,13
+    Ability = 0
+#-------------------------------
+[FISHERMAN,Finley]
+Pokemon = FINNEON,12
+    Ability = 1
+Pokemon = REMORAID,13
+    Ability = 1
+#-------------------------------
+[CYCLIST_M,Craig]
+Pokemon = MAGNEMITE,14
+    Ability = 1
+#-------------------------------
+[CYCLIST_F,Siobhan]
+Pokemon = VOLTORB,14
+    Ability = 1
+#-------------------------------
+[CRUSHKIN,Alice & Adam]
+LoseText = "Very well fought!"
+Pokemon = TIMBURR,13
+    Ability = 1
+Pokemon = MAKUHITA,13
+    Ability = 0
+#-------------------------------
+[POKEMONRANGER_F,Sandrine]
+Pokemon = GROWLITHE,12
+    Ability = 1
+Pokemon = SHINX,13
+    Ability = 0
+#-------------------------------
+[POKEFAN_M,Albert]
+Pokemon = LITLEO,12
+    Ability = 1
+Pokemon = SKIDDO,13
+    Ability = 0
+#-------------------------------
+[POKEFAN_F,Wendy]
+Pokemon = AUDINO,14
+    Ability = 0
+    Item = SITRUSBERRY
+#-------------------------------
+[JANITOR,Michael]
+Pokemon = KOFFING,13
+Pokemon = TRUBBISH,14
+    Ability = 0
+#-------------------------------
+[SCIENTIST_M,Rory]
+Pokemon = KLINK,14
+    Ability = 2
+#-------------------------------
+[DOCTOR,Alex]
+Pokemon = SOLOSIS,14
+    Ability = 1
+Pokemon = HAPPINY,14
+    Ability = 2
+#-------------------------------
+[BACKPACKER_M,Alister]
+Pokemon = PANCHAM,14
+    Ability = 0
+#-------------------------------
+[ROUGHNECK,Jesse]
+Pokemon = GULPIN,15
+    Ability = 0
+	Item = BLACKSLUDGE
+#-------------------------------
+[HARLEQUIN,Harley]
+Pokemon = MIMEJR,15
+    Ability = 1
+#-------------------------------
+[LADY,Camilla]
+Pokemon = JIGGLYPUFF,14
+    Ability = 0
+	Gender = female
+Pokemon = CLEFAIRY,15
+	Ability = 0
+	Gender = female
+#-------------------------------
+[BUGCATCHER,Otis]
+Pokemon = LEDYBA,14
+    Ability = 0
+Pokemon = SPINARAK,15
+	Ability = 0
+#-------------------------------
+[HARLEQUIN,Ian]
+Pokemon = DRIFLOON,16
+    Ability = 0
+#-------------------------------
+[HARLEQUIN,Louis]
+Pokemon = MAGIKARP,15
+    Ability = 0
+Pokemon = KRABBY,16
+    Ability = 0
+#-------------------------------
+[HARLEQUIN,Rick]
+Pokemon = SANDSHREW,15
+    Ability = 0
+	Form = 1
+Pokemon = VULPIX,16
+    Ability = 0
+	Form = 1
+#-------------------------------
+[HARLEQUIN,Anders]
+Pokemon = LUXIO,16
+    Ability = 1
+#-------------------------------
+[OFFICEWORKER_F,Sofia]
+Pokemon = FURFROU,16
+    Ability = 0
+#-------------------------------
+[MADAME,Olivia]
+Pokemon = NATU,16
+    Ability = 0
+Pokemon = STARLY,16
+	Ability = 0
+#-------------------------------
+[WORKERMINE,Troy]
+Pokemon = DIGLETT,16
+    Ability = 1
+Pokemon = WOOPER,16
+	Ability = 1
+#-------------------------------
+[WORKERICE,Eric]
+Pokemon = GROWLITHE,16
+    Ability = 0
+Pokemon = ELECTRIKE,17
+	Ability = 1
+#-------------------------------
+[BAKER,Nadia]
+Pokemon = SWIRLIX,16
+    Ability = 0
+Pokemon = SPRITZEE,16
+	Ability = 0
+#-------------------------------
+[POKEMANIAC,Carlos]
+Pokemon = PLUSLE,16
+    Ability = 0
+Pokemon = MINUN,16
+	Ability = 0
+#-------------------------------
+[FISHERMAN,Hunter]
+Pokemon = KRABBY,16
+    Ability = 0
+Pokemon = CORPHISH,16
+	Ability = 0
+#-------------------------------
+[PSYCHIC_M,Derren]
+Pokemon = RALTS,16
+    Ability = 1
+Pokemon = SOLOSIS,16
+	Ability = 0
+Pokemon = GIRAFARIG,17
+	Ability = 0
+#-------------------------------
+[ROUGHNECK,Liam]
+Pokemon = GRIMER,17
+	Ability = 0
+Pokemon = KOFFING,17
+	Ability = 0
+#-------------------------------
+[TEAMPLASMA_M,Grunt,1]
+Pokemon = ZIGZAGOON,6
+	Ability = 1
+Pokemon = PURRLOIN,7
+	Ability = 0
+#-------------------------------
+[TEAMPLASMA_F,Grunt,1]
+Pokemon = GLAMEOW,5
+	Ability = 0
+#-------------------------------
+[TEAMPLASMA_F,Grunt,2]
+Pokemon = TRUBBISH,16
+	Ability = 0
+#-------------------------------
+[TEAMPLASMA_F,Grunt,3]
+Pokemon = STUNKY,17
+	Ability = 0
+Pokemon = TRUBBISH,17
+	Ability = 0
+#-------------------------------
+[TEAMPLASMA2_M,Grunt,1]
+Pokemon = HOOTHOOT,5
+	Ability = 0
+#-------------------------------
+[TEAMPLASMA2_M,Grunt,2]
+Pokemon = POOCHYENA,6
+	Ability = 1
+#-------------------------------
+[TEAMPLASMA2_F,Grunt,1]
+Pokemon = PATRAT,4
+	Ability = 1
+#-------------------------------
+[TEAMPLASMA2_F,Grunt,2]
+Pokemon = RATTATA,5
+	Ability = 1
+#-------------------------------
+#-------------------------------
+#-------------------------------
+SCIENTIST_M
+Matthew
+2
+CASCOON,8
+SILCOON,8
+#-------------------------------
+BACKPACKER_F
+Rebecca
+2
+SCATTERBUG,8
+FLETCHLING,8
+#-------------------------------
+BACKPACKER_M
+Henry
+1
+SPEWPA,9
+#-------------------------------
+YOUNGSTER
+Paul
+1
+BUNNELBY,9
+#-------------------------------
+SCIENTIST_F
+Heather
+2
+KAKUNA,9
+METAPOD,9
+#-------------------------------
+PRESCHOOLER_F
+Natalie
+1
+CATERPIE,9
+#-------------------------------
+FISHERMAN
+Barry
+1
+MAGIKARP,9
+#-------------------------------
+PRESCHOOLER_M
+Nathan
+1
+WEEDLE,9
+#-------------------------------
+SCHOOLKID_M
+Logan
+1
+SILCOON,9
+#-------------------------------
+SCHOOLKID_F
+Lorna
+1
+CASCOON,9
+#-------------------------------
+NURSERYAIDE
+Amanda
+1
+MARILL,9
+#-------------------------------
+GENTLEMAN
+Martin
+1
+PSYDUCK,9
+#-------------------------------
+OFFICEWORKER_M
+Mark
+1
+PIKACHU,9
+#-------------------------------
+POKEMONBREEDER_M
+Tom
+1
+PETILIL,10
+#-------------------------------
+MADAME
+Christine
+2
+BUNNELBY,10
+FLETCHLING,10

@@ -1,8 +1,8 @@
 module MessageConfig
-  FontName        = "Power Green"
+  FontName        = "Power Clear"
   # in Graphics/Windowskins/ (specify empty string to use the default windowskin)
-  TextSkinName    = "speech hgss 1"
-  ChoiceSkinName  = "choice 1"
+  TextSkinName    = "speech dp 1"
+  ChoiceSkinName  = "choice dp"
   WindowOpacity   = 255
   TextSpeed       = nil   # can be positive to wait frames or negative to
                           # show multiple characters in a single frame

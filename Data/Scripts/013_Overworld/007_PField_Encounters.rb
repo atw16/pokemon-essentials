@@ -12,6 +12,7 @@ module EncounterTypes
   LandDay      = 10
   LandNight    = 11
   BugContest   = 12
+  DarkGrass    = 13
   Names = [
      "Land",
      "Cave",
@@ -25,7 +26,8 @@ module EncounterTypes
      "LandMorning",
      "LandDay",
      "LandNight",
-     "BugContest"
+     "BugContest",
+	   "DarkGrass"
   ]
   EnctypeChances = [
      [20,20,10,10,10,10,5,5,4,4,1,1],
@@ -40,10 +42,11 @@ module EncounterTypes
      [20,20,10,10,10,10,5,5,4,4,1,1],
      [20,20,10,10,10,10,5,5,4,4,1,1],
      [20,20,10,10,10,10,5,5,4,4,1,1],
-     [20,20,10,10,10,10,5,5,4,4,1,1]
+     [20,20,10,10,10,10,5,5,4,4,1,1],
+	   [20,20,10,10,10,10,5,5,4,4,1,1]
   ]
-  EnctypeDensities   = [25, 10, 10, 0, 0, 0, 0, 0, 0, 25, 25, 25, 25]
-  EnctypeCompileDens = [ 1,  2,  3, 0, 0, 0, 0, 0, 0,  1,  1,  1,  1]
+  EnctypeDensities   = [25,10,10,0,0,0,0,0,0,25,25,25,25,25]
+  EnctypeCompileDens = [ 1, 2, 3,0,0,0,0,0,0, 1, 1, 1, 1, 1]
 end
 
 
@@ -121,6 +124,11 @@ class PokemonEncounters
             @enctypes[EncounterTypes::BugContest]) ? true : false
   end
 
+  def isDarkGrass?
+    return false if @density==nil
+    return (@enctypes[EncounterTypes::DarkGrass]) ? true : false
+  end
+  
   # Returns whether grass-like encounters have been defined for the current map
   # (ignoring the Bug Catching Contest one).
   # Applies only to encounters triggered by moving around.
@@ -148,8 +156,8 @@ class PokemonEncounters
       return false
     elsif self.isCave?
       return true
-    elsif self.isGrass?
-      return PBTerrain.isGrass?($game_map.terrain_tag($game_player.x,$game_player.y))
+    elsif self.isGrass? || self.isDarkGrass?
+      return PBTerrain.isGrass?($game_map.terrain_tag($game_player.x,$game_player.y)) || PBTerrain.isDarkGrass?($game_map.terrain_tag($game_player.x,$game_player.y))
     end
     return false
   end
@@ -161,6 +169,8 @@ class PokemonEncounters
       return EncounterTypes::Water
     elsif self.isCave?
       return EncounterTypes::Cave
+	  elsif self.isDarkGrass? && PBTerrain.isDarkGrass?($game_map.terrain_tag($game_player.x,$game_player.y))
+      return EncounterTypes::DarkGrass
     elsif self.isGrass?
       time = pbGetTimeNow
       enctype = EncounterTypes::Land

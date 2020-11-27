@@ -19,8 +19,10 @@ begin
     Sky         = 16
     Space       = 17
     UltraSpace  = 18
-
-    def self.maxValue; return 18; end
+    DarkGrass   = 19
+    Field       = 20
+    
+    def self.maxValue; return 20; end
   end
 
 rescue Exception

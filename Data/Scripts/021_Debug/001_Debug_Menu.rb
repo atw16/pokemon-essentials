@@ -641,7 +641,7 @@ def pbDebugMenuActions(cmd="",sprites=nil,viewport=nil)
     params.setRange(0,MAX_MONEY)
     params.setDefaultValue($Trainer.money)
     $Trainer.money = pbMessageChooseNumber(_INTL("Set the player's money."),params)
-    pbMessage(_INTL("You now have ${1}.",$Trainer.money.to_s_formatted))
+    pbMessage(_INTL("You now have ${1}.",$Trainer.money.round.to_s_formatted))
   when "setcoins"
     params = ChooseNumberParams.new
     params.setRange(0,MAX_COINS)

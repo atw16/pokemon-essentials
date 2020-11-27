@@ -6,12 +6,79 @@
 ################################################################################
 
 # Make all wild Pokémon shiny while a certain Switch is ON (see Settings).
-Events.onWildPokemonCreate += proc { |_sender, e|
+Events.onWildPokemonCreate += proc { |sender,e|
   pokemon = e[0]
-  if $game_switches[SHINY_WILD_POKEMON_SWITCH]
-    pokemon.makeShiny
+    abil = pokemon.getAbilityList
+    if abil[abil.length-1][1] >= 2 && rand(100) < 10
+      hiddenabil = []
+      for i in abil
+        hiddenabil.push(i) if i[1] >= 2
+      end
+      pokemon.setAbility(hiddenabil[rand(hiddenabil.length)][1])
+    end
+  if $game_switches[100]
+    if isConst?(pokemon.species,PBSpecies,:GYARADOS)
+      pokemon.makeShiny
+    elsif isConst?(pokemon.species,PBSpecies,:PINECO)
+      pokemon.iv=[20,20,20,20,20,20]
+      pokemon.setNature(:ADAMANT)
+      pokemon.setAbility(0)
+      pokemon.calcStats
+    elsif isConst?(pokemon.species,PBSpecies,:PSYDUCK)
+      pokemon.iv=[20,20,20,20,20,20]
+      pokemon.setNature(:TIMID)
+      pokemon.setAbility(3)
+      pokemon.calcStats
+    elsif isConst?(pokemon.species,PBSpecies,:SHROOMISH)
+      if rand(100)<10
+        pokemon.makeShiny
+      end
+      pokemon.iv=[20,20,20,20,20,20]
+      pokemon.setNature(:ADAMANT)
+      pokemon.setAbility(2)
+      pokemon.calcStats
+    elsif isConst?(pokemon.species,PBSpecies,:VENIPEDE)
+      if rand(100)<10
+        pokemon.makeShiny
+      end
+      pokemon.iv=[20,20,20,20,20,20]
+      pokemon.setNature(:JOLLY)
+      pokemon.setAbility(2)
+      pokemon.calcStats
+    elsif isConst?(pokemon.species,PBSpecies,:GRIMER)
+      pokemon.iv=[20,20,20,20,20,20]
+      pokemon.setNature(:CAREFUL)
+      pokemon.setAbility(2)
+      pokemon.calcStats
+    elsif isConst?(pokemon.species,PBSpecies,:TRUBBISH)
+      pokemon.iv=[20,20,20,20,20,20]
+      pokemon.setNature(:ADAMANT)
+      pokemon.setAbility(2)
+      pokemon.calcStats
+    elsif isConst?(pokemon.species,PBSpecies,:KOFFING)
+      pokemon.iv=[20,20,20,20,20,20]
+      pokemon.setNature(:BOLD)
+      pokemon.setAbility(0)
+      pokemon.calcStats
+    elsif isConst?(pokemon.species,PBSpecies,:STUNKY)
+      pokemon.iv=[20,20,20,20,20,20]
+      pokemon.setNature(:JOLLY)
+      pokemon.setAbility(1)
+      pokemon.calcStats
+    end
   end
 }
+
+=begin
+Events.onWildPokemonCreate += proc { |_sender, e|
+  pokemon = e[0]
+    if pokemon.isShiny?
+      for i in 0...6
+        pokemon.iv[i] = 31
+      end
+    end
+}
+=end
 
 # Used in the random dungeon map.  Makes the levels of all wild Pokémon in that
 # map depend on the levels of Pokémon in the player's party.

@@ -387,7 +387,7 @@ def pbBattleOnStepTaken(repel = false)
   encounter = EncounterModifier.trigger(encounter)
   if $PokemonEncounters.pbCanEncounter?(encounter, repel)
     if !$PokemonTemp.forceSingleBattle && !pbInSafari? && ($PokemonGlobal.partner ||
-       ($Trainer.ablePokemonCount > 1 && PBTerrain.isDoubleWildBattle?(pbGetTerrainTag) && rand(100) < 30))
+       ($Trainer.ablePokemonCount > 1 && PBTerrain.isDoubleWildBattle?(pbGetTerrainTag) && rand(100) < 50))
       encounter2 = $PokemonEncounters.pbEncounteredPokemon(encounterType)
       encounter2 = EncounterModifier.trigger(encounter2)
       pbDoubleWildBattle(encounter[0], encounter[1], encounter2[0], encounter2[1])
@@ -1334,15 +1334,15 @@ def pbItemBall(item,quantity=1)
   if $PokemonBag.pbStoreItem(item,quantity)   # If item can be picked up
     meName = (pbIsKeyItem?(item)) ? "Key item get" : "Item get"
     if isConst?(item,PBItems,:LEFTOVERS)
-      pbMessage(_INTL("\\me[{1}]You found some \\c[1]{2}\\c[0]!\\wtnp[30]",meName,itemname))
+      pbMessage(_INTL("\\me[ItemReceived]You found some \\c[1]{2}\\c[0]!\\wtnp[30]",meName,itemname))
     elsif pbIsMachine?(item)   # TM or HM
-      pbMessage(_INTL("\\me[{1}]You found \\c[1]{2} {3}\\c[0]!\\wtnp[30]",meName,itemname,PBMoves.getName(pbGetMachine(item))))
+      pbMessage(_INTL("\\me[BWReceiveTM]You found \\c[1]{2} {3}\\c[0]!\\wtnp[30]",meName,itemname,PBMoves.getName(pbGetMachine(item))))
     elsif quantity>1
-      pbMessage(_INTL("\\me[{1}]You found {2} \\c[1]{3}\\c[0]!\\wtnp[30]",meName,quantity,itemname))
+      pbMessage(_INTL("\\me[ItemReceived]You found {2} \\c[1]{3}\\c[0]!\\wtnp[30]",meName,quantity,itemname))
     elsif itemname.starts_with_vowel?
-      pbMessage(_INTL("\\me[{1}]You found an \\c[1]{2}\\c[0]!\\wtnp[30]",meName,itemname))
+      pbMessage(_INTL("\\me[ItemReceived]You found an \\c[1]{2}\\c[0]!\\wtnp[30]",meName,itemname))
     else
-      pbMessage(_INTL("\\me[{1}]You found a \\c[1]{2}\\c[0]!\\wtnp[30]",meName,itemname))
+      pbMessage(_INTL("\\me[ItemReceived]You found a \\c[1]{2}\\c[0]!\\wtnp[30]",meName,itemname))
     end
     pbMessage(_INTL("You put the {1} away\\nin the <icon=bagPocket{2}>\\c[1]{3} Pocket\\c[0].",
        itemname,pocket,PokemonBag.pocketNames()[pocket]))
@@ -1365,7 +1365,6 @@ def pbItemBall(item,quantity=1)
 end
 
 
-
 #===============================================================================
 # Being given an item
 #===============================================================================
@@ -1376,15 +1375,21 @@ def pbReceiveItem(item,quantity=1)
   pocket = pbGetPocket(item)
   meName = (pbIsKeyItem?(item)) ? "Key item get" : "Item get"
   if isConst?(item,PBItems,:LEFTOVERS)
-    pbMessage(_INTL("\\me[{1}]You obtained some \\c[1]{2}\\c[0]!\\wtnp[30]",meName,itemname))
+    pbMessage(_INTL("\\me[ItemReceived]You obtained some \\c[1]{2}\\c[0]!\\wtnp[30]",meName,itemname))
   elsif pbIsMachine?(item)   # TM or HM
-    pbMessage(_INTL("\\me[{1}]You obtained \\c[1]{2} {3}\\c[0]!\\wtnp[30]",meName,itemname,PBMoves.getName(pbGetMachine(item))))
+    pbMessage(_INTL("\\me[BWReceiveTM]You obtained \\c[1]{2} {3}\\c[0]!\\wtnp[30]",meName,itemname,PBMoves.getName(pbGetMachine(item))))
+  elsif pbIsBerry?(item) && !itemname.starts_with_vowel? && quantity==1 # Berry starting with consonant
+    pbMessage(_INTL("\\me[ReceiveBerry]You obtained a \\c[0]{1}\\c[0]!\\wtnp[30]",itemname))
+  elsif pbIsBerry?(item) && itemname.starts_with_vowel? && quantity==1  # Berry starting with vowel
+    pbMessage(_INTL("\\me[ReceiveBerry]You obtained an \\c[0]{1}\\c[0]!\\wtnp[30]",itemname))
+  elsif pbIsBerry?(item) && quantity>1 # Berries
+    pbMessage(_INTL("\\me[ReceiveBerry]You obtained {1} \\c[0]{2}\\c[0]!\\wtnp[30]",quantity,itemname))
   elsif quantity>1
-    pbMessage(_INTL("\\me[{1}]You obtained {2} \\c[1]{3}\\c[0]!\\wtnp[30]",meName,quantity,itemname))
+    pbMessage(_INTL("\\me[ItemReceived]You obtained {2} \\c[1]{3}\\c[0]!\\wtnp[30]",meName,quantity,itemname))
   elsif itemname.starts_with_vowel?
-    pbMessage(_INTL("\\me[{1}]You obtained an \\c[1]{2}\\c[0]!\\wtnp[30]",meName,itemname))
+    pbMessage(_INTL("\\me[ItemReceived]You obtained an \\c[1]{2}\\c[0]!\\wtnp[30]",meName,itemname))
   else
-    pbMessage(_INTL("\\me[{1}]You obtained a \\c[1]{2}\\c[0]!\\wtnp[30]",meName,itemname))
+    pbMessage(_INTL("\\me[ItemReceived]You obtained a \\c[1]{2}\\c[0]!\\wtnp[30]",meName,itemname))
   end
   if $PokemonBag.pbStoreItem(item,quantity)   # If item can be added
     pbMessage(_INTL("You put the {1} away\\nin the <icon=bagPocket{2}>\\c[1]{3} Pocket\\c[0].",

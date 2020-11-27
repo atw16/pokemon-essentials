@@ -338,6 +338,18 @@ ItemHandlers::UseInField.add(:EXPALLOFF,proc { |item|
   next 1
 })
 
+ItemHandlers::UseInField.add(:PROSPEROUSCHARM,proc { |item|
+  $PokemonBag.pbChangeItem(:PROSPEROUSCHARM,:PROSPEROUSCHARMOFF)
+  pbMessage(_INTL("The Prosperous Charm was turned off."))
+  next 1
+})
+
+ItemHandlers::UseInField.add(:PROSPEROUSCHARMOFF,proc { |item|
+  $PokemonBag.pbChangeItem(:PROSPEROUSCHARMOFF,:PROSPEROUSCHARM)
+  pbMessage(_INTL("The Prosperous Charm was turned on."))
+  next 1
+})
+
 #===============================================================================
 # UseOnPokemon handlers
 #===============================================================================
@@ -787,6 +799,94 @@ ItemHandlers::UseOnPokemon.add(:RARECANDY,proc { |item,pkmn,scene|
   scene.pbHardRefresh
   next true
 })
+
+
+ItemHandlers::UseOnPokemon.add(:ULTRAIVTRAINER,proc { |item,pkmn,scene|
+  if !isConst?(pkmn.type1,PBTypes,:BUG) && !isConst?(pkmn.type2,PBTypes,:BUG) ||
+    pkmn.shadowPokemon? || pkmn.isEgg?
+    scene.pbDisplay(_INTL("This item cannot be used on that type of Pokémon."))
+    next false
+  end
+  commands = []
+  cmdHP     = -1
+  cmdAtk    = -1
+  cmdDef    = -1
+  cmdSpAtk  = -1
+  cmdSpDef  = -1
+  cmdSpd    = -1
+  cmdQuit   = -1
+  #
+  commands[cmdHP = commands.length]  = _INTL("HP")
+  commands[cmdAtk = commands.length] = _INTL("Attack")
+  commands[cmdDef = commands.length] = _INTL("Defense")
+  commands[cmdSpAtk = commands.length]  = _INTL("Sp. Atk")
+  commands[cmdSpDef = commands.length] = _INTL("Sp. Def")
+  commands[cmdSpd = commands.length] = _INTL("Speed")
+  commands[cmdQuit = commands.length] = _INTL("Cancel")
+  #
+  cmd = scene.pbShowCommands(_INTL("Do what with {1}?",pkmn.name),commands)
+    if cmdHP>=0 && cmd==cmdHP
+      if pkmn.iv[0] == 31 # Max HP IV
+        scene.pbMessage(_INTL("Your {1} already has a perfect HP IV.",pkmn.name))
+        next false
+      else
+        pkmn.iv[0] = 31
+        pkmn.calcStats
+        scene.pbMessage(_INTL("Your {1} now has a perfect HP IV!",pkmn.name))
+      end
+    elsif cmdAtk>=0 && cmd==cmdAtk
+      if pkmn.iv[1] == 31 # Max Attack IV
+        scene.pbMessage(_INTL("Your {1} already has a perfect Attack IV.",pkmn.name))
+        next false
+      else
+        pkmn.iv[1] = 31
+        pkmn.calcStats
+        scene.pbMessage(_INTL("Your {1} now has a perfect Attack IV!",pkmn.name))
+      end
+    elsif cmdDef>=0 && cmd==cmdDef
+      if pkmn.iv[2] == 31 # Max Defense IV
+        scene.pbMessage(_INTL("Your {1} already has a perfect Defense IV.",pkmn.name))
+        next false
+      else
+        pkmn.iv[2] = 31
+        pkmn.calcStats
+        scene.pbMessage(_INTL("Your {1} now has a perfect Defense IV!",pkmn.name))
+      end
+    elsif cmdSpAtk>=0 && cmd==cmdSpAtk
+      if pkmn.iv[4] == 31 # Max Sp. Atk IV
+        scene.pbMessage(_INTL("Your {1} already has a perfect Sp. Atk IV.",pkmn.name))
+        next false
+      else
+        pkmn.iv[4] = 31
+        pkmn.calcStats
+        scene.pbMessage(_INTL("Your {1} now has a perfect Sp. Atk IV!",pkmn.name))
+      end
+    elsif cmdSpDef>=0 && cmd==cmdSpDef
+      if pkmn.iv[5] == 31 # Max Sp. Def IV
+        scene.pbMessage(_INTL("Your {1} already has a perfect Sp. Def IV.",pkmn.name))
+        next false
+      else
+        pkmn.iv[5] = 31
+        pkmn.calcStats
+        scene.pbMessage(_INTL("Your {1} now has a perfect Sp. Def IV!",pkmn.name))
+      end
+    elsif cmdSpd>=0 && cmd==cmdSpd
+      if pkmn.iv[3] == 31 # Max Speed IV
+        scene.pbMessage(_INTL("Your {1} already has a perfect Speed IV.",pkmn.name))
+        next false
+      else
+        pkmn.iv[3] = 31
+        pkmn.calcStats
+        scene.pbMessage(_INTL("Your {1} now has a perfect Speed IV!",pkmn.name))
+      end
+    else
+      next false
+    end
+  cmd = scene.pbShowCommands(_INTL("Do what with {1}?",pkmn.name),commands)
+  scene.pbRefresh
+  next true
+})
+
 
 ItemHandlers::UseOnPokemon.add(:POMEGBERRY,proc { |item,pkmn,scene|
   next pbRaiseHappinessAndLowerEV(pkmn,scene,PBStats::HP,[

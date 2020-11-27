@@ -655,6 +655,7 @@ def pbNoticePlayer(event)
   if !pbFacingEachOther(event,$game_player)
     pbExclaim(event)
   end
+  pbWait(10)
   pbTurnTowardEvent($game_player,event)
   pbMoveTowardPlayer(event)
 end

@@ -1,15 +1,15 @@
 ﻿# See the documentation on the wiki to learn how to edit this file.
 #-------------------------------
 [000]
-PlayerA = POKEMONTRAINER_Red,trchar000,boy_bike,boy_surf,boy_run,boy_surf,boy_fish_offset,boy_fish_offset
-PlayerB = POKEMONTRAINER_Leaf,trchar001,girl_bike,girl_surf,girl_run,girl_surf,girl_fish_offset,girl_fish_offset
-TrainerVictoryME = Battle victory trainer.ogg
-WildVictoryME = Battle victory wild.ogg
-TrainerBattleBGM = Battle trainer.mid
-SurfBGM = Surfing.mid
-BicycleBGM = Bicycle.mid
-Home = 3,7,5,8
-WildBattleBGM = Battle wild.mid
+PlayerA = POKEMONTRAINER_Nate,bwheromale_walk,bwheromale_bike,bwheromale_crawl,bwheromale_run,bwheromale_crawl,bwheromale_fish,bwheromale_fish
+PlayerB = POKEMONTRAINER_Rosa,bwherofemale_walk,bwherofemale_bike,bwherofemale_crawl,bwherofemale_run,bwherofemale_crawl,bwherofemale_fish,bwherofemale_fish
+TrainerVictoryME = BWTrainerVictory.ogg
+WildVictoryME = BWVictoryWildPokemon.ogg
+TrainerBattleBGM = BWTrainerBattle.ogg
+SurfBGM = BWSurf.ogg
+BicycleBGM = BWBike.ogg
+Home = 48,5,6,8
+WildBattleBGM = BWBattleWildPokemon.ogg
 #-------------------------------
 [001]
 # Intro
@@ -160,6 +160,16 @@ MapPosition = 0,14,6
 Outdoor = true
 ShowArea = true
 #-------------------------------
+[032]
+# Dandelo Town
+Bicycle = true
+Outdoor = true
+ShowArea = true
+#-------------------------------
+[033]
+# Gym
+BattleBack = 
+#-------------------------------
 [034]
 # Ice Cave
 BattleBack = cave1
@@ -210,6 +220,12 @@ Outdoor = true
 BicycleAlways = true
 ShowArea = true
 #-------------------------------
+[043]
+# Paix Village
+Bicycle = true
+Outdoor = true
+ShowArea = true
+#-------------------------------
 [044]
 # Route 6
 MapSize = 2,11
@@ -239,6 +255,10 @@ MapPosition = 0,15,10
 Outdoor = true
 Environment = Rock
 ShowArea = true
+#-------------------------------
+[048]
+# \PN's house
+HealingSpot = 43,11,12
 #-------------------------------
 [049]
 # Rock Cave
@@ -390,3 +410,105 @@ MapPosition = 0,12,10
 BattleBack = city
 MapPosition = 1,13,16
 Outdoor = true
+#-------------------------------
+[076]
+# \PN's bedroom
+#-------------------------------
+[077]
+# Rival house
+#-------------------------------
+[078]
+# Rival bedroom
+#-------------------------------
+[079]
+# Lab
+#-------------------------------
+[080]
+# Route 15
+Bicycle = true
+Outdoor = true
+ShowArea = true
+#-------------------------------
+[081]
+# Tree Shrine Town
+Bicycle = true
+Outdoor = true
+ShowArea = true
+#-------------------------------
+[082]
+# Pokemon Center
+HealingSpot = 81,36,13
+#-------------------------------
+[083]
+# Route 16
+Bicycle = true
+Outdoor = true
+ShowArea = true
+#-------------------------------
+[089]
+# Blue Tree Forest
+Bicycle = true
+Outdoor = true
+ShowArea = true
+#-------------------------------
+[090]
+# Blue Tree Forest
+Bicycle = true
+Outdoor = true
+#-------------------------------
+[091]
+# Traveller's Lodge
+ShowArea = true
+#-------------------------------
+[092]
+# Blue Tree Forest
+Bicycle = true
+Outdoor = true
+ShowArea = true
+#-------------------------------
+[093]
+# Blue Tree Forest
+Bicycle = true
+Outdoor = true
+ShowArea = true
+#-------------------------------
+[100]
+# Route 17
+Bicycle = true
+Outdoor = true
+ShowArea = true
+#-------------------------------
+[101]
+# Route 17
+Bicycle = true
+Outdoor = true
+ShowArea = true
+#-------------------------------
+[102]
+# Hidden Grotto
+Bicycle = true
+Outdoor = true
+ShowArea = true
+#-------------------------------
+[103]
+# Gate
+BattleBack = indoor2
+#-------------------------------
+[104]
+# Hollit City Outskirts
+Bicycle = true
+Outdoor = true
+ShowArea = true
+#-------------------------------
+[105]
+# Hollit City
+Bicycle = true
+Outdoor = true
+ShowArea = true
+#-------------------------------
+[113]
+# Picea Forest
+BattleBack = forest
+Bicycle = true
+Outdoor = true
+ShowArea = true

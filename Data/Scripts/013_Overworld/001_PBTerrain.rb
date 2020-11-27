@@ -18,6 +18,9 @@ module PBTerrain
   SootGrass       = 14
   Bridge          = 15
   Puddle          = 16
+  Plain           = 17
+  DarkGrass       = 18					  
+  Field           = 19
 
   def self.isSurfable?(tag)
     return PBTerrain.isWater?(tag)
@@ -57,20 +60,38 @@ module PBTerrain
     return tag==PBTerrain::Grass ||
            tag==PBTerrain::TallGrass ||
            tag==PBTerrain::UnderwaterGrass ||
-           tag==PBTerrain::SootGrass
+           tag==PBTerrain::SootGrass ||
+           tag==PBTerrain::DarkGrass
   end
 
+  def self.isDarkGrass?(tag)
+    return tag==PBTerrain::DarkGrass
+  end
+  
   def self.isJustGrass?(tag)   # The Poké Radar only works in these tiles
     return tag==PBTerrain::Grass ||
-           tag==PBTerrain::SootGrass
+           tag==PBTerrain::SootGrass ||
+           tag==PBTerrain::DarkGrass
   end
 
+  def self.isJustDarkGrass?(tag)
+    return tag==PBTerrain::DarkGrass
+  end
+  
   def self.isLedge?(tag)
     return tag==PBTerrain::Ledge
   end
 
   def self.isIce?(tag)
     return tag==PBTerrain::Ice
+  end
+
+  def self.isPlain?(tag)
+    return tag==PBTerrain::Plain
+  end
+  
+  def self.isField?(tag)
+    return tag==PBTerrain::Field
   end
 
   def self.isBridge?(tag)
@@ -88,6 +109,7 @@ module PBTerrain
   end
 
   def self.isDoubleWildBattle?(tag)
-    return tag==PBTerrain::TallGrass
+    return tag==PBTerrain::TallGrass ||
+	       tag==PBTerrain::DarkGrass
   end
 end
